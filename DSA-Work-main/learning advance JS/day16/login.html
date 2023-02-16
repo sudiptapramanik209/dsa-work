@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body{
+        background-color: blanchedalmond;
+      }
+    h1{
+      text-align: center;
+      font-size: 50px;
+    }
+    #masai{
+      
+      height:auto;
+      width: 30%;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding-bottom:20px;
+      border-radius: 20px;
+      background:linear-gradient(.25turn, rgb(146, 71, 233), 20%, rgb(202, 164, 39));
+
+    }
+    
+    #masai p{
+      color: white;
+      margin-left: 20px;
+    }
+    a{
+      color:rgb(214, 137, 137);
+    }
+    h2{
+      text-align: center;
+      padding: 20px;
+    }
+    input[type="password"],
+    input[type="email"]
+    {
+      width: 90%;
+      height: 30px;
+      margin-left: 20px;
+    }
+    input[type="password"]:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    input[type="email"]:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    p{
+    margin-left: 20px;
+    }
+    input[type="submit"] {
+      background-color: #2b619e;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 50%;
+      height: 50%;
+      font-size: 20px;
+      margin: auto;
+      margin-top: 20px;
+      display: grid;
+      justify-content: center;
+      
+    }
+    input[type="submit"]:hover{
+        background-color: rgb(230, 98, 98);
+    }
+    
+  </style>
+
+</head>
+<body>
+  <h1>masai</h1>
+  
+    <div id="masai">
+      <form>
+      <h2>Sign in</h2>
+      <p>EMAIL</p>
+      <input id="email" type="email">
+      <p>PASSWORD</p>
+      <input id="pass" type="password">
+      <input id="submit" type="submit" />
+      </form>
+      
+    </div>
+  
+</body>
+</html>
+<script>
+  let data=JSON.parse(localStorage.getItem("addData"))
+  //console.log(data);
+document.querySelector("#submit").addEventListener("click",signin)
+function signin(){
+  let email=document.querySelector("#email").value;
+  let pass=document.querySelector("#pass").value;
+    event.preventDefault();
+    data.forEach(function(elem,index){
+      console.log(email)
+      if(email==elem.EmailL&&pass==elem.pass){
+        alert("sucessfully login");
+        window.location.href="C:\Users\sudipta pramanik\OneDrive\Documents\homehtml\advance js\day16\student.html";
+      }
+      else{
+        alert("input value are invalid");
+      }
+    })
+}
+</script>

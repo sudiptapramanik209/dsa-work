@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<head>
+  <style>
+    body{
+        background-color: blanchedalmond;
+      }
+    h1{
+      text-align: center;
+      font-size: 50px;
+    }
+    #masai{
+      
+      height:auto;
+      width: 30%;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding-bottom:20px;
+      border-radius: 20px;
+      background:linear-gradient(.25turn, rgb(146, 71, 233), 20%, rgb(202, 164, 39));
+
+    }
+    
+    #masai p{
+      color: white;
+      margin-left: 20px;
+    }
+    a{
+      color:rgb(214, 137, 137);
+    }
+    h2{
+      text-align: center;
+      padding: 20px;
+    }
+    input[type="password"],
+    input[type="email"]
+    {
+      width: 90%;
+      height: 30px;
+      margin-left: 20px;
+    }
+    input[type="password"]:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    input[type="email"]:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    p{
+    margin-left: 20px;
+    }
+    input[type="submit"] {
+      background-color: #2b619e;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 50%;
+      height: 50%;
+      font-size: 20px;
+      margin: auto;
+      margin-top: 20px;
+      display: grid;
+      justify-content: center;
+      
+    }
+    input[type="submit"]:hover{
+        background-color: rgb(230, 98, 98);
+    }
+    
+  </style>
+
+</head>
+<body>
+  <h1>Masai</h1>
+  
+    <div id="masai">
+      <form>
+      <h2>Sign Up</h2>
+      <p>Email</p>
+      <input id="username" type="email">
+      <p>PASSWORD</p>
+      <input id="password" type="password">
+      <input id="submit" type="submit" onclick="signup()" />
+      <p>Alrody have an account?<a href="C:\Users\sudipta pramanik\OneDrive\Documents\homehtml\advance js\day15\signin.html">Sign in</a></p>
+
+      </form>
+      
+    </div>
+  
+</body>
+</html>
+<script src="./index.js"></script>

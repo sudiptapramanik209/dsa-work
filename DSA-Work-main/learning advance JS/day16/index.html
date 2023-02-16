@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body{
+      background-color: blanchedalmond;
+
+    }
+    h1{
+      text-align: center;
+      font-size: 50px;
+    }
+    #masai{
+      
+      height:auto;
+      width: 30%;
+      margin: auto;
+      box-shadow: rgba(245, 240, 240, 0.35) 0px 5px 15px;
+      padding-bottom:20px;
+      border-radius: 20px;
+      background:linear-gradient(.25turn, rgb(101, 51, 182), 10%, rgb(206, 95, 21));
+
+    }
+    #masai p{
+      color: white;
+      margin-left: 20px;
+    }
+    a{
+      color:rgb(214, 137, 137);
+    }
+    h2{
+      text-align: center;
+      padding: 20px;
+    }
+    input[type="text"],
+    input[type="email"]
+    {
+      width: 90%;
+      height: 30px;
+      margin-left: 20px;
+    }
+    input[type="text"]:hover{
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    input[type="email"]:hover{
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    
+    input[type="submit"] {
+      background-color: #0c3461;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 50%;
+      padding: 11px;
+      font-size: 20px;
+      margin: auto;
+      margin-top: 20px;
+      display: grid;
+      justify-content: center;
+      
+    }
+    input[type="submit"]:hover{
+        background-color: rgb(216, 50, 50);
+    }
+    
+  </style>
+
+</head>
+<body>
+  <h1>masai</h1>
+  
+    <div id="masai">
+      <form>
+      <h2>Sign up</h2>
+      <p >FULL NAME</p>
+      <input id="name" type="text">
+      <p>EMAIL</p>
+      <input id="email" type="email">
+      <p>PASSWORD</p>
+      <input id="pass" type="text">
+      <input id="submit" type="submit"/>
+      <p>Alrody have an account?<a href="C:\Users\sudipta pramanik\OneDrive\Desktop\my project\savvy-kettle-788\login\signup.html">Sign in</a></p>
+      </form>
+      
+    </div>
+  
+</body>
+</html>
+<script>
+  document.querySelector("#submit").addEventListener("click",signup)
+  let arr=JSON.parse(localStorage.getItem("addData"))||[]
+
+  function signup(){
+    event.preventDefault();
+    let name=document.querySelector("#name").value;
+    let email=document.querySelector("#email").value;
+    let password=document.querySelector("#pass").value;
+    let obj={
+      fullName:name,
+      EmailL:email,
+      pass:password
+    }
+    arr.push(obj);
+    console.log(arr);
+    localStorage.setItem("addData",JSON.stringify(arr));
+
+  }
+</script>

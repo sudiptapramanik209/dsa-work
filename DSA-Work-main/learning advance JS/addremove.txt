@@ -1,0 +1,63 @@
+class Queue {
+        constructor() {
+          this.elements = {};
+          this.head = 0;
+          this.tail = 0;
+        }
+        enQueue(element) {
+          this.elements[this.tail] = element;
+          this.tail++;
+        }
+        deQueue() {
+          const item = this.elements[this.head];
+          delete this.elements[this.head];
+          this.head++;
+          return item;
+        }
+      }
+let stack2=new Queue()
+stack2. enQueue(23)
+stack2. enQueue(100)
+stack2. enQueue(987)
+stack2. enQueue(234)
+stack2.deQueue()
+console.log(stack)
+
+class stack{
+    constructor(){
+        this.length=0;
+        this.stack_contents=[];
+    }
+
+    enQueue(...el){
+        //console.log("element",el);
+        el.forEach((element) => {
+            this.stack_contents.push(element);
+            this.length++;
+        });
+        return this.stack_contents;
+    }
+    deQueue() {
+            if(this.stack_contents==0){
+                console.log("empty array");
+            }
+            //let x=this.stack_contents[this.stack_contents.];
+            //this.stack_contents.pop();
+            //return  x;
+
+            const item = this.stack_contents[this.length];
+            delete this.stack_contents[this.length];
+            this.length++;
+            return item;
+      }
+      enQueueThree(){
+
+      }
+      deQueueThree(){
+
+      }
+}
+let stack1=new stack();
+stack1.enQueue(1,2,3,4,5,6,7,8,9)
+stack1.deQueue();
+console.log("stack:",stack1);

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #input{
+            width: 300px;
+            height: 40px;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        #bob{
+            border: 1px solid black;
+            width: 60%;
+            height: 500px;
+            overflow: scroll;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 10px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #bob img{
+            height: 100%;
+            width: 50%;
+            object-fit: cover;
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Search Movie</h1>
+    <input id="input" type="text" placeholder="search Movie" oninput="debounce(search,2000)">
+    <div id="bob"></div>
+</body>
+</html>
+<script src="./search.js"></script>
